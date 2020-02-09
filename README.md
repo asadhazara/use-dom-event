@@ -16,7 +16,7 @@
   <br />
   <br />
   <br />
-  <pre>npm i --save <a href="https://www.npmjs.com/package/use-dom-event">use-dom-event</a></pre>
+  <pre>npm install --save <a href="https://www.npmjs.com/package/use-dom-event">use-dom-event</a></pre>
   <br />
   <br />
   <br />
@@ -44,7 +44,7 @@
 
 > To get started just enter de following command and you're good to go.
 
-    npm install use-dom-event
+    npm install --save use-dom-event
 
 ## Usage
 
@@ -151,5 +151,15 @@ function MyComponent () {
 
 ## API
 ## Contribute
+
+If you see any improvement to make, feel free to open a Pull Request.
+
 ## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright (c) 2020 Asad Hazara.
+
 ## Links
+- **[React Hooks](https://reactjs.org/docs/hooks-intro.html)**
