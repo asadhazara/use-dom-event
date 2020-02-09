@@ -10,7 +10,7 @@
   </h1>
   <sup>
     A <a href="https://reactjs.org/docs/hooks-intro.html">React Hook</a> for DOM Events.</em>
-    <em>Brought to you by </em> <a href="https://www.zorillamedia.com"><code>Zorilla</code></a>.
+    <em>Brought to you by </em> <a href="https://www.zorrillamedia.com"><code>Zorrilla</code></a>.
   </sup>
   <br />
   <br />
