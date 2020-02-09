@@ -15,10 +15,7 @@
   <br />
   <br />
   <br />
-  <br />
   <pre>npm install --save <a href="https://www.npmjs.com/package/use-dom-event">use-dom-event</a></pre>
-  <br />
-  <br />
   <br />
   <br />
   <br />
