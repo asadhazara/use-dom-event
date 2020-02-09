@@ -1,0 +1,54 @@
+{
+  "name": "use-dom-event",
+  "version": "0.0.1",
+  "description": "A React Hook for DOM Events",
+  "author": "Asad Hazara",
+  "homepage": "https://github.com/asadhazara/use-dom-event",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
+    "prebuild": "npm run lint",
+    "build": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments",
+    "postbuild": "npm run build:declaration",
+    "build:declaration": "tsc --project tsconfig.json",
+    "commit": "npx git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadhazara/use-dom-event.git"
+  },
+  "keywords": [
+    "DOM Events",
+    "React Hooks",
+    "React",
+    "React",
+    "use-dom-event"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/react": "^16.9.19",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "typescript": "^3.7.2",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "react": "^16.12.0"
+  }
+}
