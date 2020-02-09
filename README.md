@@ -83,7 +83,7 @@ function MyComponent () {
       type: 'click',
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
-        // console.log(window.innerWidth)
+        // console.log(event.target)
       }
     },
     [] // optional array of dependencies just like useEffect Hook
@@ -105,7 +105,7 @@ function MyComponent () {
       type: 'mouseenter',
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
-        // console.log(window.innerWidth)
+        // console.log(event.target)
       }
     },
     [] // optional array of dependencies just like useEffect Hook
@@ -136,7 +136,7 @@ function MyComponent () {
       type: 'mouseenter',
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
-        // console.log(window.innerWidth)
+        // console.log(event.target)
       }
     },
     [] // optional array of dependencies just like useEffect Hook
