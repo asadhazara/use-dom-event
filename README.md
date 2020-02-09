@@ -35,7 +35,7 @@
   - [DOM Document Object](#dom-document-object)
   - [DOM Element Object](#dom-element-object)
   - [DOM Element Object within React RefObject](#dom-element-object-within-react-refobject)
-- [API](#api)
+- [API Reference](#api-reference)
 - [Contribute](#contribute)
 - [License](#license)
 - [Links](#links)
@@ -149,7 +149,19 @@ function MyComponent () {
 }
 ```
 
-## API
+## API Reference
+
+```typescript
+type Options = {
+  target: Window | Document | HTMLElement | Element;
+  type: string;
+  listener: EventListenerOrEventListenerObject;
+  options?: boolean | AddEventListenerOptions;
+}
+
+useDOMEvent(options: Options, deps?: React.DependencyList);
+```
+
 ## Contribute
 
 If you see any improvement to make, feel free to open a Pull Request.
