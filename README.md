@@ -9,7 +9,7 @@
     <br />
   </h1>
   <sup>
-    A <a href="https://reactjs.org/docs/hooks-intro.html">React Hook</a> for DOM Events.</em>
+    A <a href="https://reactjs.org/docs/hooks-intro.html">React Hook</a> for DOM Events. Written in Typescript. Also perfectly usable in Javascript.</em>
     <em>Brought to you by </em> <a href="https://www.zorrillamedia.com"><code>Zorrilla</code></a>.
   </sup>
   <br />
@@ -52,8 +52,7 @@ You can use this React Hook with Window Object or any other HTML DOM Object. Thi
 ```javascript
 import useDOMEvent from 'use-dom-event';
 
-function MyComponent () {
-
+function MyComponent() {
   useDOMEvent(
     {
       target: Window,
@@ -61,12 +60,12 @@ function MyComponent () {
       // the event param here is automatically typed as UIEvent
       listener: function(event) {
         // console.log(window.innerWidth)
-      }
+      },
     },
-    [] // optional array of dependencies just like useEffect Hook
+    [], // optional array of dependencies just like useEffect Hook
   );
 
-  return <div>MyComponent</div>
+  return <div>MyComponent</div>;
 }
 ```
 
@@ -75,8 +74,7 @@ function MyComponent () {
 ```javascript
 import useDOMEvent from 'use-dom-event';
 
-function MyComponent () {
-
+function MyComponent() {
   useDOMEvent(
     {
       target: document,
@@ -84,21 +82,21 @@ function MyComponent () {
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
         // console.log(event.target)
-      }
+      },
     },
-    [] // optional array of dependencies just like useEffect Hook
+    [], // optional array of dependencies just like useEffect Hook
   );
 
-  return <div>MyComponent</div>
+  return <div>MyComponent</div>;
 }
 ```
+
 ### DOM Element Object
 
 ```javascript
 import useDOMEvent from 'use-dom-event';
 
-function MyComponent () {
-
+function MyComponent() {
   useDOMEvent(
     {
       target: document.body,
@@ -106,12 +104,12 @@ function MyComponent () {
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
         // console.log(event.target)
-      }
+      },
     },
-    [] // optional array of dependencies just like useEffect Hook
+    [], // optional array of dependencies just like useEffect Hook
   );
 
-  return <div>MyComponent</div>
+  return <div>MyComponent</div>;
 }
 ```
 
@@ -123,7 +121,7 @@ When using `dangerouslySetInnerHTML`, you cannot set eventListeners using JSX. I
 import { useRef } from 'react';
 import useDOMEvent from 'use-dom-event';
 
-function MyComponent () {
+function MyComponent() {
   const RefElement = useRef(null);
 
   useDOMEvent(
@@ -137,12 +135,12 @@ function MyComponent () {
       // the event param here is automatically typed as MouseEvent
       listener: function(event) {
         // console.log(event.target)
-      }
+      },
     },
-    [] // optional array of dependencies just like useEffect Hook
+    [], // optional array of dependencies just like useEffect Hook
   );
 
-  return <div ref={RefElement} dangerouslySetInnerHTML={{ __html: '<button>Inner Button</button>' }} />
+  return <div ref={RefElement} dangerouslySetInnerHTML={{ __html: '<button>Inner Button</button>' }} />;
 }
 ```
 
@@ -171,4 +169,5 @@ If you see any improvement to make, feel free to open a Pull Request.
 - Copyright (c) 2020 Asad Hazara.
 
 ## Links
+
 - **[React Hooks](https://reactjs.org/docs/hooks-intro.html)**
