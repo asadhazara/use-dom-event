@@ -99,12 +99,12 @@ export function useDOMEvent<K extends string>(
   deps?: React.DependencyList,
 ): void {
   useEffect(() => {
-    if (target) {
-      target.addEventListener(type, listener, options);
+    if (!target) return;
 
-      return (): void => {
-        target.removeEventListener(type, listener, options);
-      };
-    }
+    target.addEventListener(type, listener, options);
+
+    return (): void => {
+      target.removeEventListener(type, listener, options);
+    };
   }, deps || []); // eslint-disable-line react-hooks/exhaustive-deps
 }
