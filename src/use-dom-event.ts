@@ -13,7 +13,7 @@ import { useEffect } from 'react';
  */
 export function useDOMEvent<K extends keyof WindowEventMap>(
   options: {
-    target: Window;
+    target?: Window;
     type: K;
     listener: (this: Window, ev: WindowEventMap[K]) => any;
     options?: boolean | AddEventListenerOptions;
@@ -34,7 +34,7 @@ export function useDOMEvent<K extends keyof WindowEventMap>(
  */
 export function useDOMEvent<K extends keyof DocumentEventMap>(
   options: {
-    target: Document;
+    target?: Document;
     type: K;
     listener: (this: Document, ev: DocumentEventMap[K]) => any;
     options?: boolean | AddEventListenerOptions;
@@ -55,7 +55,7 @@ export function useDOMEvent<K extends keyof DocumentEventMap>(
  */
 export function useDOMEvent<K extends keyof HTMLElementEventMap>(
   options: {
-    target: HTMLElement;
+    target?: HTMLElement;
     type: K;
     listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any;
     options?: boolean | AddEventListenerOptions;
@@ -76,7 +76,7 @@ export function useDOMEvent<K extends keyof HTMLElementEventMap>(
  */
 export function useDOMEvent<K extends keyof ElementEventMap>(
   options: {
-    target: Element;
+    target?: Element;
     type: K;
     listener: (this: Element, ev: ElementEventMap[K]) => any;
     options?: boolean | AddEventListenerOptions;
@@ -91,7 +91,7 @@ export function useDOMEvent<K extends string>(
     listener,
     options,
   }: {
-    target: Window | Document | HTMLElement | Element;
+    target?: Window | Document | HTMLElement | Element;
     type: K;
     listener: EventListenerOrEventListenerObject;
     options?: boolean | AddEventListenerOptions;
@@ -99,6 +99,8 @@ export function useDOMEvent<K extends string>(
   deps?: React.DependencyList,
 ): void {
   useEffect(() => {
+    if (!target) return;
+
     window.addEventListener(type, listener, options);
 
     return (): void => {
