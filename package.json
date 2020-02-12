@@ -1,6 +1,6 @@
 {
   "name": "use-dom-event",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A React Hook for DOM Events. Written in Typescript. Also perfectly usable in Javascript.",
   "author": "Asad Hazara",
   "homepage": "https://github.com/asadhazara/use-dom-event",
@@ -18,7 +18,6 @@
     "postbuild": "npm run build:declaration",
     "build:declaration": "tsc --project tsconfig.json",
     "prepublish": "npm run build",
-    "publish": "npm publish",
     "commit": "git add . && npx git-cz"
   },
   "repository": {
